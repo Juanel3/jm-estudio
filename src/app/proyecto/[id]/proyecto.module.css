@@ -1,0 +1,565 @@
+/* Variables de colores - definidas en globals.css */
+
+.page {
+  font-family: var(--font-geist-sans);
+  line-height: 1.6;
+  color: var(--black);
+}
+
+/* Error Page */
+.errorContent {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.errorContent h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(15, 27, 72, 0.3);
+}
+
+.backLink:hover {
+  background: var(--dark-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(15, 27, 72, 0.4);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--white);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.breadcrumbContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--dark-blue);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heroImageFile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  width: 100%;
+  color: var(--white);
+}
+
+.categoryTag {
+  display: inline-block;
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+/* Details Section */
+.details {
+  background: var(--white);
+  padding: 5rem 0;
+}
+
+.detailsContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Project Info Sidebar */
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  background: var(--gray-100);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--gray-200);
+}
+
+.infoTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gray-600);
+}
+
+.infoItem svg {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+.techTag {
+  background: var(--white);
+  color: var(--primary-blue);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(15, 27, 72, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.techTag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.techTag:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 27, 72, 0.25);
+}
+
+.techTag:hover::before {
+  opacity: 1;
+}
+
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contentSection {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.sectionText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.resultsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--white);
+  border-radius: 15px;
+  border: 2px solid var(--gray-200);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+
+.resultItem svg {
+  color: var(--primary-blue);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resultItem span {
+  font-weight: 600;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Gallery */
+.gallery {
+  background: var(--gray-100);
+  padding: 5rem 0;
+}
+
+.galleryContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.galleryItem {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Testimonial */
+.testimonial {
+  background: var(--white);
+  padding: 5rem 0;
+}
+
+.testimonialContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonialCard {
+  background: var(--gray-100);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--gray-200);
+}
+
+.quoteIcon {
+  font-size: 4rem;
+  color: var(--primary-blue);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.testimonialText {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.testimonialAuthor strong {
+  color: var(--black);
+  font-size: 1.1rem;
+}
+
+.testimonialAuthor span {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+.contact {
+  background: transparent;
+  padding: 5rem 0;
+}
+
+.contactContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.contactSubtitle {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  margin-bottom: 3rem;
+}
+
+/* Back to Portfolio Section */
+.backSection {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.backContent {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroContent {
+    padding: 0 1rem 2rem;
+  }
+
+  .detailsContent,
+  .galleryContent,
+  .testimonialContent,
+  .contactContent,
+  .backContent {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+  }
+
+  .testimonialText {
+    font-size: 1.1rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .technologies {
+    gap: 0.6rem;
+  }
+
+  .techTag {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .resultsList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .resultItem {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .resultItem svg {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+
+  .testimonialText {
+    font-size: 1rem;
+  }
+
+  .technologies {
+    gap: 0.5rem;
+  }
+
+  .techTag {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .resultItem {
+    padding: 1rem 0.75rem;
+  }
+
+  .resultItem svg {
+    font-size: 1.8rem;
+  }
+
+  .resultItem span {
+    font-size: 0.9rem;
+  }
+
+  .backSection {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .backLink {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Textos responsive para el botón de volver */
+.backTextDesktop {
+  display: inline;
+}
+
+.backTextMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .backTextDesktop {
+    display: none;
+  }
+  
+  .backTextMobile {
+    display: inline;
+  }
+}

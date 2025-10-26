@@ -1,0 +1,507 @@
+/* Variables de colores - definidas en globals.css */
+
+.page {
+  font-family: var(--font-geist-sans);
+  line-height: 1.6;
+  color: var(--black);
+}
+
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, #0A1229 0%, #0F1B48 20%, #1A2B5C 40%, #1B3465 60%, #2A4A7A 80%, #5A7B9A 100%);
+  padding: 5rem 2rem;
+  padding-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.heroVideoContainer {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heroVideo {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+.heroVideo::-webkit-media-controls {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.heroVideo::-webkit-media-controls-panel {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.heroVideo::-webkit-media-controls-play-button {
+  background: var(--primary-blue);
+  border-radius: 50%;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* Historia Section */
+.historia {
+  background: var(--white);
+  padding: 5rem 0;
+}
+
+.historiaContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.historiaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sectionTitleLeft {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.historiaDescription {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.imagePlaceholder {
+  background: var(--gray-200);
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+.historiaImageFile {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+/* Misión, Visión, Valores Section */
+.misionVision {
+  background: linear-gradient(to right, #0F1B48 0%, #1B3465 100%);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.misionVision::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.misionVisionContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.misionVisionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.misionCard,
+.visionCard,
+.valoresCard {
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.misionCard::before,
+.visionCard::before,
+.valoresCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%);
+  opacity: 0.8;
+}
+
+.misionCard:hover,
+.visionCard:hover,
+.valoresCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(50px) saturate(200%);
+  -webkit-backdrop-filter: blur(50px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.misionCard:hover::before,
+.visionCard:hover::before,
+.valoresCard:hover::before {
+  opacity: 1;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.6) 50%, 
+    transparent 100%);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.cardIcon:hover {
+  transform: scale(1.1);
+  color: var(--dark-blue);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cardDescription {
+  color: var(--gray-600);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+/* ¿Por qué elegirnos? Section */
+.porQueElegirnos {
+  background: var(--white);
+  padding: 5rem 0;
+}
+
+.porQueElegirnosContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid var(--primary-blue);
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border: 2px solid var(--dark-blue);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.2);
+}
+
+.statIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.statText {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Call to Action Section */
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.7)),
+              url('/nosotros-foot.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.ctaBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.7)),
+              url('/nosotros-foot.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.ctaButton {
+  background: var(--light-blue);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.ctaButton:hover {
+  background: var(--dark-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.ctaButton:visited {
+  color: var(--white);
+}
+
+/* Footer */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 1rem 2rem;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroVideoContainer {
+    max-width: 100%;
+  }
+
+  .heroVideo {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .historia {
+    padding: 3rem 1rem;
+  }
+
+  .historiaGrid,
+  .misionVisionGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .historiaImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .historiaImageFile {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .historiaText {
+    text-align: center;
+  }
+
+  .sectionTitleLeft {
+    text-align: center;
+  }
+
+  .misionVision {
+    padding: 3rem 1rem;
+  }
+
+  .misionCard,
+  .visionCard,
+  .valoresCard {
+    padding: 2rem;
+  }
+
+  .stats {
+    padding: 3rem 1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cta {
+    padding: 3rem 1rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 6rem 0.5rem 1.5rem;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .sectionTitle,
+  .sectionTitleLeft {
+    font-size: 2rem;
+  }
+
+  .sectionTitleLeft {
+    text-align: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    min-width: 250px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+}
+

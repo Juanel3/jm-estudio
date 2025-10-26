@@ -22,10 +22,10 @@ export default function Footer() {
           />
         </div>
         <nav className={styles.footerNav}>
-          <link href="/" className={styles.footerLink}>Inicio</link>
-          <link href="/nosotros" className={styles.footerLink}>Nosotros</link>
-          <link href="/servicios" className={styles.footerLink}>Servicios</link>
-          <link href="/portafolio" className={styles.footerLink}>Portafolio</link>
+          <a href="/" className={styles.footerLink}>Inicio</a>
+          <a href="/nosotros" className={styles.footerLink}>Nosotros</a>
+          <a href="/servicios" className={styles.footerLink}>Servicios</a>
+          <a href="/portafolio" className={styles.footerLink}>Portafolio</a>
         </nav>
         <div className={styles.socialIcons}>
           <YouTube className={styles.socialIcon} />
